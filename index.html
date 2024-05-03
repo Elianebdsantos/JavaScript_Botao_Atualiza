@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ews Eventos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+ <div class="informações_de_viagem"> 
+    <h1>Ews <br> Eventos</h1>
+    <p>Prepare-se para uma experiência inesquecível! Nós prometemos momentos incríveis, conexões significativas e aprendizado valioso<br>Então, o que você está esperando? Marque sua presença, traga sua energia e vamos fazer deste evento um sucesso juntos!<br>
+    <div class="inputs">
+        <input type="text" id="inputNome" placeholder="Digite o tipo de evento"> 
+        <div class="entrarEvento"> <button class="botaoLogin">Pesquisar</button>
+        </div>
+    </div>
+ </div> 
+ <div>
+    <img src="imag/festatematica90.png" alt="Evento" id="img1">
+    <img width="1400" height="700" src="imag/festa90.jpg" alt="Evento"id="img2">
+    <img width="1400" height="700" src="imag/robo90.jpg" alt="Evento" id="img3">
+  </div>
+  <div>
+    <iframe width="1400" height="700" src="https://www.youtube.com/embed/goGuCeGYyYw?si=r8rTWNoa625MrDvP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="video1"></iframe>
+</div>
+
+<div>
+    <a href="tel:+1234567890" style="font-size: 30px; margin-right: 20px;"><i class="fas fa-phone"></i></a>
+    <a href="mailto:ewseventos@gmail.com" style="font-size: 30px;"><i class="fas fa-envelope"></i></a>
+</div>
+<header>
+    <div class="login">
+        <a href=>Fale Conosco</a>
+    </div>
+ </header>
+</body>
+</html>
+
+
+
+<button onclick="atualizar()">Atualizar</button>
+
+<script>
+    function atualizar() {
+        document.querySelector("body").style.backgroundColor="#D8BFD8"
+        document.querySelector('#img1').setAttribute('src', 'imag/fotovirginia.webp')
+        document.querySelector('#img2').setAttribute('src', 'imag/pinturahallowen23.png')
+        document.querySelector('#img3').setAttribute('src', 'imag/justo.webp')
+        var video = document.getElementById("video1");
+        video.src = "https://www.youtube.com/embed/T7gqQwZzaaY?si=Ee5UHtFfVS8owbMj"
+        var h1Elements = document.getElementsByTagName('h1');
+        for(var i = 0; i < h1Elements.length; i++) {
+        if(h1Elements[i].innerHTML === 'Ews Eventos') {
+            h1Elements[i].innerHTML = 'EWS Eventos';
+            h1Elements[i].style.fontFamily = 'Arial'; // Substitua 'Arial' pela fonte desejada
+            h1Elements[i].style.position = 'absolute';
+            h1Elements[i].style.top = '0';
+            h1Elements[i].style.left = '0';
+            h1Elements[i].style.paddingTop = '20px'; // Adicione um padding-top para descer as informações
+            document.body.style.marginTop = '220px'; // Ajuste '100px' para a altura do seu elemento h1
+         
+    }
+    }
+}
+
+</script>
